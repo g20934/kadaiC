@@ -183,8 +183,8 @@ function deleteMarker(){
 //なお、ここをDOMContentLoadedイベント発生時にするとエラーが出る(addMaker関数でgoogleが定義されていないというエラー)。
 //======================
 window.onload = function(){
-  lat = getCookie('clickLat');
-  lng = getCookie('clickLng');
+  let lat = getCookie('clickLat');
+  let lng = getCookie('clickLng');
 
   if (lat != "" && lng != "") {
     addMarker(parseFloat(lat), parseFloat(lng));
