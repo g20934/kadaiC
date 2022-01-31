@@ -234,7 +234,7 @@ window.onload = function(){
 //=======================
 myButton.addEventListener('click', function(){
   //時差を0とする
-   timeDiff = 0;
+  timeDiff = 0;
 
   //現在のマーカーを削除する
   deleteMarker();
