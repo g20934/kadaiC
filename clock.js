@@ -112,7 +112,8 @@ function twoDigit(num){
 setTimeout(
   setInterval(
     function(){
-      showTime(timeDiff)}
+      showTime(timeDiff)
+    }
     ,1000)//無名関数を使って、引数ありでも対応できるようにする 参考；https://lightgauge.net/language/javascript/3377/
   , 1000 - new Date().getMilliseconds());
 
