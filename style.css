@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/*body要素*/
+body{
+  background-color:#7fbfff;
+  height: 100%;
+  width: auto;
+}
+
+/*h3要素*/
+h3{
+  font-family:'Klee One', cursive;
+}
+
+#explain{
+  color:#bd2b4b;
+}
+
+/*マップ*/
+#map_canvas {
+  width: 1050px;/*1050px*/
+  height: 550px;
+}
+
+/*デジタル時計*/
+p{
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#time{
+  margin-left: 50px;
+}
+
+#second{
+  font-size:0.75em;
+}
+
+.number{
+  font-size: 1.5em;
+}
+
+/*ボタン*/
+button{
+  margin-top:30px;
+  font-family:'Klee One', cursive;
+
+  /* ブラウザ特有のスタイルを無効に */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* 整える */
+  margin: 1em 0; /* 前後の隙間 */
+  padding: 0.6em 1em; /* 塗りの余白 */
+  font-size: 1em; /* フォントサイズ */
+  background-color: #bd2b4b; /* 背景色 */
+  color: #FFF; /* テキストカラー */
+  cursor: pointer; /* カーソルを指マークに */
+  border-radius: 3px; /* 角の丸み */
+  border: 0; /* 枠線を消す */
+  transition: 0.3s; /* ホバーの変化を滑らかに */
+}
+
+/* ホバー時（カーソルをのせた時）の見た目 */
+button:hover {
+  background-color: #ff3b65; /* 背景色 */
+}
