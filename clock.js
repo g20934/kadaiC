@@ -143,7 +143,6 @@ function initMap(){
 
     //日付・曜日・時刻を計算し直す
     timeDiff = Math.round((135-lng)/15);//時差
-    //showTime(timeDiff);
 
     //マーカーを削除する
     deleteMarker();
@@ -202,7 +201,6 @@ window.onload = function(){
 //=======================
 myButton.addEventListener('click', function(){
   timeDiff = 0;
-  //showTime(timeDiff);
 
   //明石市にマーカーをつける
   deleteMarker();
