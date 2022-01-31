@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>デジタル時計</title>
+    <link rel="stylesheet" href="style.css">
+    <!--グーグルフォント読み込み-->
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h3>マップをクリックすると、その地点の<span id = explain>日付・曜日・時刻</span>が表示されるデジタル時計です。</h3>
+    <p id = "date_time">ここに日付と曜日、デジタル時計が表示されます。</p>
+    <div id = "map_canvas">ここにマップが表示されます。</div>
+    <button>日本標準時に戻す</button>
+    <script src=clock.js defer async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap" async defer></script>
+  </body>
+</html>
