@@ -142,7 +142,7 @@ function initMap(){
     let lat = e.latLng.lat();//緯度
     let lng = e.latLng.lng();//経度
 
-    //日付・曜日・時刻を計算し直す
+    //日付・曜日・時刻を計算し直すために、時差を変更する
     timeDiff = Math.round((135-lng)/15);//時差
 
     //マーカーを削除する
@@ -187,13 +187,21 @@ window.onload = function(){
   let lng = getCookie('clickLng');
 
   if (lat != "" && lng != "") {
+    //Cookieに保存しておいた地点にマーカーをつける
     addMarker(parseFloat(lat), parseFloat(lng));
+    
+    //日付・曜日・時刻を計算し直すために時差を計算する
+    timeDiff = Math.round((135-lng)/15);//時差
   }else{
     //明石市にマーカーをつける
     addMarker(35, 135);
+    
     //クッキーを設定する(もし初回時に何もクリックせずに閉じたら、クッキーには日本明石市が登録されている。)
     setCookie('clickLat', 35, 30);
     setCookie('clickLng', 135, 30);
+    
+    //時差は0とする
+    timeDiff = 0;
   }
 };
 
@@ -201,15 +209,16 @@ window.onload = function(){
 //「日本標準時に戻す」ボタンがクリックされたら、時差を0にしてshowTimeし、明石市にマーカーをつける
 //=======================
 myButton.addEventListener('click', function(){
-  timeDiff = 0;
-
-  //明石市にマーカーをつける
+  //現在のマーカーを削除し、明石市にマーカーをつける
   deleteMarker();
   addMarker(35, 135);
 
   //クッキーを設定する
   setCookie('clickLat', 35, 30);
   setCookie('clickLng', 135, 30);
+  
+  //時差を0とする
+   timeDiff = 0;
 });
 
 //====================
